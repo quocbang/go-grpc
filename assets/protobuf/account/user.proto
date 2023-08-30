@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package account;
+
+option go_package="github.com/quocbang/go-grpc/pkg/protobuf/account";
+
+message LoginRequest {
+  string userID = 1;
+  string password = 2;
+}
+
+message LoginReply {
+  string token = 1;
+  string tokenRefresh = 2;
+}
+

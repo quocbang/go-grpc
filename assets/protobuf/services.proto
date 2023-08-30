@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package protobuf;
+
+option go_package="github.com/quocbang/go-grpc/pkg/protobuf";
+
+import "protobuf/account/user.proto";
+
+service Product {
+  // Login is Sign In to the gRPC server with username and password provided.
+  rpc Login(account.LoginRequest) returns (account.LoginReply) {}  
+}
